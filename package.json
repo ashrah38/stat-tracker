@@ -1,0 +1,26 @@
+{
+  "name": "stat-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashrah38/stat-tracker.git"
+  },
+  "author": "Hamza Ashraf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashrah38/stat-tracker/issues"
+  },
+  "homepage": "https://github.com/ashrah38/stat-tracker#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}

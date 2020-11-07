@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+
+:root {
+  --clr-background: #3d195b;
+  --font-main: "Quicksand", sans-serif;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: var(--clr-background);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+}
+
+.wrapper {
+  display: flex;
+  column-gap: 2rem;
+  margin: 1rem;
+}
+
+.header {
+  width: 100%;
+  height: 12vh;
+  background: black;
+  color: white;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  height: 90%;
+}
+
+.logo-img {
+  height: 100%;
+  width: 100%;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  width: 440px;
+  max-width: 800px;
+  height: auto;
+  background: linear-gradient(#fff, rgba(255, 255, 255, 0.7)),
+    url("./images/epl-trophy.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.teams:last-child {
+  background: rgba(255, 0, 0, 0.6);
+}
+
+.teams:nth-last-child(2) {
+  background: rgba(255, 0, 0, 0.6);
+}
+
+.teams:nth-last-child(3) {
+  background: rgba(255, 0, 0, 0.6);
+}
+
+.table-heading {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.8rem;
+  background: #ccc;
+}
+
+.teams {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.79rem;
+}
+
+.entry {
+  display: flex;
+  border-bottom: 1px solid #aaa;
+  width: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-club {
+  width: 250px;
+}
+
+/* schedule boxes */
+.schedule {
+  border: 1px solid #777;
+  display: flex;
+  flex-direction: column;
+  width: 408px;
+  height: 200px;
+  background: linear-gradient(#fff, rgba(255, 255, 255, 0.7)),
+    url("./images/schedule.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.schedule-heading {
+  background: #aaa;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.schedule-entry {
+  display: flex;
+  font-size: 0.8rem;
+  justify-content: space-evenly;
+}
+
+.team-one {
+  width: 150px;
+  text-align: center;
+}
+
+.team-two {
+  width: 150px;
+  text-align: center;
+}
+
+/* stats tables */
+.stat-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0.5rem;
+  column-gap: 0.5rem;
+}
+
+.stat-container {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #777;
+  overflow-y: scroll;
+}
+
+.goals {
+  background: linear-gradient(#fff, rgba(255, 255, 255, 0.4)),
+    url("./images/goals.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.assists {
+  background: linear-gradient(#fff, rgba(255, 255, 255, 0.4)),
+    url("./images/assists.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.chances {
+  background: linear-gradient(#fff, rgba(255, 255, 255, 0.4)),
+    url("./images/assists.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.cleansheets {
+  background: linear-gradient(#fff, rgba(255, 255, 255, 0.4)),
+    url("./images/cleansheets.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.stat-heading {
+  background: #aaa;
+  font-size: 0.9rem;
+  padding-left: 0.5rem;
+}
+
+.stat-entry {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 0.3rem;
+  font-size: 0.8rem;
+  padding-left: 0.5rem;
+}
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 1px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: black;
+}
+
+@media screen and (max-width: 968px) {
+  .table-container {
+    width: 90vw;
+  }
+  .wrapper {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .stat-boxes {
+    align-items: center;
+    justify-content: space-around;
+    margin: 2rem;
+  }
+  .schedule {
+    width: 100%;
+  }
+
+  .stat-container {
+    width: 48%;
+  }
+}
