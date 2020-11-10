@@ -1,26 +1,6 @@
-const leagueStandings = document.getElementsByClassName('teams');
-console.log(leagueStandings);
+const leagueStandings = document.querySelector('.table-container');
 
-
-function populateTable(data) {
-    let numTeams = data.api.results;
-    leagueStandings.forEach(entry => {
-        entry.innerHTML = `
-            <h3 class="entry table-rank">${data}</h3>
-            <h3 class="entry table-club">${data}</h3>
-            <h3 class="entry table-played">${data}</h3>
-            <h3 class="entry table-won">${data}</h3>
-            <h3 class="entry table-draw">${data}</h3>
-            <h3 class="entry table-lost">${data}</h3>
-            <h3 class="entry table-for">${data}</h3>
-            <h3 class="entry table-against">${data}</h3>
-            <h3 class="entry table-diff">${data}</h3>
-            <h3 class="entry table-pts">${data}</h3>
-        `
-    })
-}
-
-function getStandings(){
+function getStandings() {
     fetch("https://api-football-v1.p.rapidapi.com/leagueTable/2790", {
         "method": "GET",
         "headers": {
@@ -28,18 +8,35 @@ function getStandings(){
             "x-rapidapi-host": "api-football-v1.p.rapidapi.com"
         }
     })
-    .then(response => {
-        return response.json();
-    })
-    .catch(err => {
-        console.error(err);
-    });
+        .then(response => {
+            response.json().then((data) => {
+                let standings = data.api.standings;
+                console.log(data.api.standings);
+                standings.forEach((entry) => {
+                    entry.forEach((team) => {
+                        leagueStandings.innerHTML += `
+                        <div class="teams">
+                        <h3 class="entry table-rank">${team.rank}</h3>
+                        <h3 class="entry table-club">${team.teamName}</h3>
+                        <h3 class="entry table-played">${team.matchsPlayed}</h3>
+                        <h3 class="entry table-won">${team.win}</h3>
+                        <h3 class="entry table-draw">${team.draw}</h3>
+                        <h3 class="entry table-lost">${team.lose}</h3>
+                        <h3 class="entry table-for">${team.goalsFor}</h3>
+                        <h3 class="entry table-against">${team.goalsAgainst}</h3>
+                        <h3 class="entry table-diff">${team.goalsDiff}</h3>
+                        <h3 class="entry table-pts">${team.points}</h3>
+                        </div>
+                    `;
+                        console.log(leagueStandings.clientHeight);
+                    })
+                })
+            });
+        })
+        .catch(err => {
+            console.error(err);
+        });
 }
+
 
 getStandings();
-
-function testOne(data){
-    console.log(data)
-}
-
-testOne(getStandings());

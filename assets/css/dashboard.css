@@ -40,6 +40,12 @@ body {
   font-size: 3rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding-right: 1rem;
+}
+
+.return-btn{
+  color: #fff;
 }
 
 .logo {
@@ -55,11 +61,11 @@ body {
 .table-container {
   display: flex;
   flex-direction: column;
-  width: 440px;
+  width: 560px;
   max-width: 800px;
-  height: auto;
+  min-height: 404px;
   background: linear-gradient(#fff, rgba(255, 255, 255, 0.7)),
-    url("./images/epl-trophy.jpg") no-repeat center center;
+    url("../images/epl-trophy.jpg") no-repeat center center;
   background-size: cover;
 }
 
@@ -108,7 +114,7 @@ body {
   width: 408px;
   height: 200px;
   background: linear-gradient(#fff, rgba(255, 255, 255, 0.7)),
-    url("./images/schedule.jpg") no-repeat center center;
+    url("../images/schedule.jpg") no-repeat center center;
   background-size: cover;
 }
 
@@ -140,6 +146,7 @@ body {
   flex-wrap: wrap;
   row-gap: 0.5rem;
   column-gap: 0.5rem;
+  padding-right: 2rem;
 }
 
 .stat-container {
@@ -153,25 +160,25 @@ body {
 
 .goals {
   background: linear-gradient(#fff, rgba(255, 255, 255, 0.4)),
-    url("./images/goals.jpg") no-repeat center center;
+    url("../images/goals.jpg") no-repeat center center;
   background-size: cover;
 }
 
 .assists {
   background: linear-gradient(#fff, rgba(255, 255, 255, 0.4)),
-    url("./images/assists.jpg") no-repeat center center;
+    url("../images/assists.jpg") no-repeat center center;
   background-size: cover;
 }
 
 .chances {
   background: linear-gradient(#fff, rgba(255, 255, 255, 0.4)),
-    url("./images/assists.jpg") no-repeat center center;
+    url("../images/assists.jpg") no-repeat center center;
   background-size: cover;
 }
 
 .cleansheets {
   background: linear-gradient(#fff, rgba(255, 255, 255, 0.4)),
-    url("./images/cleansheets.jpg") no-repeat center center;
+    url("../images/cleansheets.jpg") no-repeat center center;
   background-size: cover;
 }
 
@@ -201,7 +208,7 @@ body {
   background-color: black;
 }
 
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 868px) {
   .table-container {
     width: 90vw;
   }
