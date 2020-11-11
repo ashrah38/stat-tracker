@@ -5,7 +5,7 @@ const futureSchedule = document.querySelector('.future');
 
 
 function getStandings() {
-    fetch("https://api-football-v1.p.rapidapi.com/leagueTable/2790", {
+    fetch("https://api-football-v1.p.rapidapi.com/leagueTable/2673", {
         "method": "GET",
         "headers": {
             "x-rapidapi-key": "cd9e713103mshfc454d2de6c9196p1b64c3jsn12e73827eb98",
@@ -41,7 +41,7 @@ function getStandings() {
 }
 
 function getFutureSchedule() {
-    fetch("https://api-football-v1.p.rapidapi.com/v2/fixtures/league/2790/next/35?timezone=Europe/London", {
+    fetch("https://api-football-v1.p.rapidapi.com/v2/fixtures/league/2673/next/35?timezone=Europe/London", {
         "method": "GET",
         "headers": {
             "x-rapidapi-key": "cd9e713103mshfc454d2de6c9196p1b64c3jsn12e73827eb98",
@@ -75,7 +75,7 @@ function getFutureSchedule() {
 }
 
 function getPastSchedule() {
-    fetch("https://api-football-v1.p.rapidapi.com/v2/fixtures/league/2790/last/35?timezone=Europe/London", {
+    fetch("https://api-football-v1.p.rapidapi.com/v2/fixtures/league/2673/last/35?timezone=Europe/London", {
         "method": "GET",
         "headers": {
             "x-rapidapi-key": "cd9e713103mshfc454d2de6c9196p1b64c3jsn12e73827eb98",
@@ -109,7 +109,7 @@ function getPastSchedule() {
 }
 
 function getTopScores() {
-    fetch("https://api-football-v1.p.rapidapi.com/v2/topscorers/2790", {
+    fetch("https://api-football-v1.p.rapidapi.com/v2/topscorers/2673", {
         "method": "GET",
         "headers": {
             "x-rapidapi-key": "cd9e713103mshfc454d2de6c9196p1b64c3jsn12e73827eb98",

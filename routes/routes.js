@@ -19,7 +19,7 @@ router.get('/league/seriea', (req, res, next) => {
     res.render('serie.ejs');
 });
 
-router.get('/league/ligue1', (req, res, next) => {
+router.get('/league/ligue', (req, res, next) => {
     res.render('ligue.ejs');
 });
 
