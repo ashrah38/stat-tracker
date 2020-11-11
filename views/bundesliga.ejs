@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/bcd5005408.js" crossorigin="anonymous"></script>
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="../assets/images/bundesliga-logo.png" alt="" class="logo-img">
+            </div>
+            <div class="league-name">Bundesliga</div>
+            <a href="/">
+                <i class="return-btn fas fa-1x fa-arrow-left"></i>
+            </a>
+        </header>
+        <!-- points table -->
+        <div class="wrapper">
+            <div class="left-wrapper">
+                <div class="table-container">
+                    <div class="table-heading">
+                        <h3 class="entry table-rank">#</h3>
+                        <h3 class="entry table-club">Club</h3>
+                        <h3 class="entry table-played">P</h3>
+                        <h3 class="entry table-won">W</h3>
+                        <h3 class="entry table-draw">D</h3>
+                        <h3 class="entry table-lost">L</h3>
+                        <h3 class="entry table-for">GF</h3>
+                        <h3 class="entry table-against">GA</h3>
+                        <h3 class="entry table-diff">GD</h3>
+                        <h3 class="entry table-pts">Pts</h3>
+                    </div>
+                </div>
+                <!-- top scorers -->
+                <div class="stat-container goals">
+                    <div class="stat-heading">
+                        <h3 class="top-scorer-name">Top Scorers</h3>
+                        <div class="tags">
+                            <h3 class="top-scorer-tags">Games</h3>
+                            <h3 class="top-scorer-tags">Min</h3>
+                            <h3 class="top-scorer-tags">Goals</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stat-boxes">
+                <!-- schedule  -->
+                <div class="past schedule">
+                    <div class="schedule-heading">
+                        <h3>- Results -</h3>
+                    </div>
+                </div>
+                <div class="future schedule">
+                    <div class="schedule-heading">
+                        <h3>- Upcoming Fixtures -</h3>
+                    </div>
+                </div>
+                <!-- stats containers -->
+            </div>
+        </div>
+    </div>
+    <!-- scripts -->
+    <script src="../assets/js/epl.js"></script>
+</body>
+
+</html>
